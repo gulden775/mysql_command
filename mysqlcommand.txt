@@ -1,0 +1,16 @@
+mysql -u name_user -p
+
+SHOW DATABASES;
+// Создание пользователя
+CREATE USER 'some_user'@'somehost.somedomain' IDENTIFIED BY 'some_password';                                                   
+
+
+SELECT VERSION();
+SHOW VARIABLES LIKE '%version%';
+
+// удаление mysql
+ 10 sudo aptitude purge mysql-common mysql-server mysql-common
+                                                
+
+// mysqldump
+gunzip < all_databases.gz | mysql -u USERNAME -p

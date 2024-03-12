@@ -1,0 +1,21 @@
+sudo apt install wget
+скачать последний архив
+
+wget https://dev.mysql.com/get/mysql-apt-config_0*_all.deb
+
+добвить репозитории в source.list.d/mysql
+
+sudo dpkg -i mysql-apt-config_*_all.deb
+
+sudo dpkg-reconfigure mysql-apt-config
+
+создать файл mysql_pubkey.asc записать туда ключ
+
+gpg --dearmor mysql_pubkey.asc
+копируем ключ
+sudo cp mysql_pubkey.asc.gpg /etc/apt/trusted.gpg.d/
+
+sudo apt update не должно быть ошибок
+
+sudo apt install mysql-server
+ 
